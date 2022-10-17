@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no, address=no, email=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>🐶지정독서모임 후기</title>
+    <title>🐶지정독서모임 공지</title>
 </head>
 <body>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
@@ -228,17 +228,27 @@
         .reveal iframe {
             display: block;
         }
+        .reveal em {
+            font-size: 14px;
+            font-style:inherit;
+            opacity: 0.6;
+            display: block;
+        }
+        .book {
+            width: 100%;
+            display: block;
+        }
+        .book img{
+            width: min(90%, 160px);            
+        }
         .bookList {
             display: flex;
             gap: 4px;
-            align-items: center;
+            align-items: flex-start;
+            width: min(90%, 320px);            
         }
-
-        .image-wrap.book {
-            aspect-ratio: 3 / 5;
-            height: clamp(240px, 50vw, 400px);
-            width: auto;
-            display: block;
+        .bookList img{
+            width: 100%;
         }
         .herStory {
             width:100%;
@@ -299,11 +309,16 @@
             animation-delay:0.6s;
             animation-timing-function: ease-out;
             animation-fill-mode	:backwards;
-        }           
+        }   
+        .video-wrap {position:relative; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden;}
+        .video-wrap iframe,
+        .video-wrap object,
+        .video-wrap embed {position:absolute; top:0; left:0; width:100%; height:100%;}
+
     </style>
     <div id="Dogear" class='container'>
         <div class="image-wrap Cover">
-            <img src='Img/cover.jpg'>
+            <img src='https://fancy-cuchufli-8edd09.netlify.app/Img/cover.jpg'>
         </div>
         <div class="Information fadeup">
             <div>
@@ -401,7 +416,9 @@
                         </p>
                         <div class='reveal'>
                             <span>이원님의 추천 컨텐츠</span>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FUHmNUoYNmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
+                            <div class="video-wrap">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/FUHmNUoYNmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
+                            </div>
                         </div>
                     </div>
 
@@ -419,11 +436,11 @@
                         <div class='reveal'>
                             <span>나무님의 추천 도서</span>
                             <div class="bookList">
-                                <div class="image-wrap book">
-                                    <img src='Img/book01.jpg'>
+                                <div class="book">
+                                    <img src='https://fancy-cuchufli-8edd09.netlify.app/Img/book01.jpg'>
                                 </div>
-                                <div class="image-wrap book">
-                                    <img src='Img/book02.jpg'>
+                                <div class="book">
+                                    <img src='https://fancy-cuchufli-8edd09.netlify.app/Img/book02.jpg'>
                                 </div>
                             </div>
                             <em>은유로서의 질병 - 수전 손택, 유원 - 백온유</em>
@@ -449,8 +466,8 @@
                         </p>
                         <div class='reveal'>
                             <span>도치님의 추천 도서</span>
-                            <div class="image-wrap book">
-                                <img src='Img/book03.jpg'>
+                            <div class="book">
+                                <img src='https://fancy-cuchufli-8edd09.netlify.app/Img/book03.jpg'>
                                 <em>다른 방식으로 보기 - 존 버거</em>
                             </div>
                         </div>
@@ -474,7 +491,7 @@
                     <div class="opinion">
                         <h5>간장</h5>
                         <p>
-                            유행의 영향도 있지만 대체적으로 예전에 비해 활동성이 좋고 편한 모습을 추구하는 것 같다. "예전으로 돌아갈 수 없을 것 같다" 라는 말을 들을 때 외형을 꾸미는 것에 대한 인식이 개선되고있다는 생각이 들면서 공감도 되고 기분이 좋다. 반면에 '소식좌'가 유행인데 남아서 버려지는 음식을 생각하면 소식이 좋지만 마른 몸을 추구하는 인식은 여전하니 복잡한 감정이 든다. 여성의 몸이 자유로워 지는 방법을 생각하면 ‘여성의 몸이 성적 대상화 되지 않는 날이 오긴 할까’ 하는 냉소적인 생각으로 이어지는데 결국 여성이 권위를 찾은 세상이 되어야만 여성의 몸이 야하지도 않고, 보호 받을 필요도 없는 자유를 찾을 수 있다고 생각한다.     
+                            유행의 영향도 있지만 대체적으로 예전에 비해 활동성이 좋고 편한 모습을 추구하는 것 같다. "예전으로 돌아갈 수 없을 것 같다" 라는 말을 들을 때 외형을 꾸미는 것에 대한 인식이 개선되고 있다는 생각이 들면서 공감도 되고 기분이 좋다. 반면에 '소식좌'가 유행인데 남아서 버려지는 음식을 생각하면 소식이 좋지만 마른 몸을 추구하는 인식은 여전하니 복잡한 감정이 든다. 여성의 몸이 자유로워지는 방법을 생각하면 ‘여성의 몸이 성적 대상화되지 않는 날이 오긴 할까’ 하는 냉소적인 생각으로 이어지는데 결국 여성이 권위를 찾은 세상이 되어야만 여성의 몸이 야하지도 않고, 보호받을 필요도 없는 자유를 찾을 수 있다고 생각한다.     
                         </p>
                     </div>
                     <div class="opinion">
@@ -484,8 +501,8 @@
                         </p>
                         <div class='reveal'>
                             <span>나무님의 추천 도서</span>
-                            <div class="image-wrap book">
-                                <img src='Img/book04.jpg'>
+                            <div class="book">
+                                <img src='https://fancy-cuchufli-8edd09.netlify.app/Img/book04.jpg'>
                                 <em>포르노랜드 - 게일 다인스</em>
                             </div>
                         </div>
@@ -493,7 +510,7 @@
                     <div class="opinion">
                         <h5>안녕</h5>
                         <p>
-                            직업 특성상 어린이, 청소년을 많이 보는데 외모에 대한 강박을 쉽게 볼 수 있다. 예를 들어 급식을 다 남기거나, 맨 얼굴을 보이기 싫어서 마스크를 쓴 채로 밥을 먹는 행동 등 요즘 여자 청소년들은 그런 것 때문에 학업 성적이 더 떨어진다는 얘기가 있을 정도다. 여자 연예인이 마른 몸으로 아름다움의 기준이 되어 돈을 버는 걸 비난할 수는 없지만 청소년들은 그걸 보면서 무대의상인 크롭탑을 입는 등 답습을 하기 때문에 유해함을 자주 느낀다. 외모 강박을 만드는 요소들이 코르셋이라는 걸 인정하는 것 만으로도 여성의 몸이 자유로워질 수 있다고 생각한다.
+                            직업 특성상 어린이, 청소년을 많이 보는데 외모에 대한 강박을 쉽게 볼 수 있다. 예를 들어 급식을 다 남기거나, 맨 얼굴을 보이기 싫어서 마스크를 쓴 채로 밥을 먹는 행동 등 요즘 여자 청소년들은 그런 것 때문에 학업 성적이 더 떨어진다는 얘기가 있을 정도다. 여자 연예인이 마른 몸으로 아름다움의 기준이 되어 돈을 버는 걸 비난할 수는 없지만 청소년들은 그걸 보면서 무대의상인 크롭탑을 입는 등 답습을 하기 때문에 유해함을 자주 느낀다. 외모 강박을 만드는 요소들이 코르셋이라는 걸 인정하는 것만으로도 여성의 몸이 자유로워질 수 있다고 생각한다.
                         </p>
                     </div>
                     <div class="opinion">
@@ -545,9 +562,9 @@
                         <h5>간장</h5>
                         <p>
                             📝 마사 누스바움<br/>
-                            감정은 절대 자연스러운 게 아니라 주장하는 감정학자로 ‘원래 그래’라는 말로 책임을 회피하던 경험을 떠올리게 했다. 두려움에 저항할 이유가 되어준 힘이 되는 말인 동시에 누군가의 이해할 수 없는 분노나 혐오와 마주할 때도 공격적인 행동들이 두려움에서 기인한 것인지 고민해 볼 수 있을 것 같다.
+                            감정은 절대 자연스러운 게 아니라 주장하는 감정 학자로 ‘원래 그래’라는 말로 책임을 회피하던 경험을 떠올리게 했다. 두려움에 저항할 이유가 되어준 힘이 되는 말인 동시에 누군가의 이해할 수 없는 분노나 혐오와 마주할 때도 공격적인 행동들이 두려움에서 기인한 것인지 고민해 볼 수 있을 것 같다.
                         </p>
-                        <img src="/Img/name01.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name01.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -558,8 +575,8 @@
                         </div>
                         <div class='reveal'>
                             <span>간장의 추천 도서</span>
-                            <div class="image-wrap book">
-                                <img src='Img/book05.jpg'>
+                            <div class="book">
+                                <img src='https://fancy-cuchufli-8edd09.netlify.app/Img/book05.jpg'>
                                 <em>자기만의 방 - 버지니아 울프</em>
                             </div>
                         </div>
@@ -571,7 +588,7 @@
                             📝 바버라 에런라이크<br/>
                             사회가 나서야 될 문제를 개인의 책임으로 전가하고 있다는 의견에 공감이 갔다. 현실에 만연한 힐링 서적들만 봐도 알 수 있다. 코로나로 인한 팬데믹 상황에서 정신건강을 지원해 준다는 프로그램을 봤을 때도 노동자에게 실질적인 지원이나 휴가 등 사회적 보상을 주지 않고 국가가 제 역할을 개인의 책임이나 나약함으로 치부하는 건 위험한 문제라고 생각했다.
                         </p>
-                        <img src="/Img/name02.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name02.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -588,7 +605,7 @@
                             📝 에이드리언 리치<br/>
                             최근 들어 틈만 나면 결혼에 대한 얘기를 듣게 되는데 평소에 비혼을 생각하고 있어서 좋은 의미로 하는 얘기인 걸 알지만 부담이 되고 흔들리기도 한다. 이성애자로 자신을 정체화하는 데서 벗어나는 건 책에서 말했듯 큰 용기가 필요하겠지만 보상도 매우 클 것이라는 독려에 마음이 훨씬 가벼워지는 것을 느꼈다.
                         </p>
-                        <img src="/Img/name03.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name03.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -605,7 +622,7 @@
                             📝 에이드리언 리치<br/>
                             이 책의 페미니스트들이 가부장제에 속에서 살아왔기 때문에 스스로 피해를 인식했고 당장 무너뜨릴 수는 없지만 목소리를 내서 후세에 작은 도움을 줄 수 있다고 공통적으로 말하는 것 같았다. 90페이지에 리치가 남편의 (폭력적인)죽음을 겪고 한 말이 있는데 결국 책 속의 모든 인물들의 말을 집약해서 한 목소리로 내는 게 이 말이라고 생각했다. 
                         </p>
-                        <img src="/Img/name04.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name04.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -625,7 +642,7 @@
                             📝 루스 베이더 긴즈버그<br/>
                             보수적인 법학 분야에서 연방 대법원 판사로 임명되기까지 얼마나 수 많은 고초를 겪었을까 싶었다. "여성 대법관이 9명이 되지 말라는 법이 있습니까?"라고 말하는 긴즈버그를 보고 뒤통수를 맞은 기분이 들면서 누군가의 기억 속에 이런 영감을 줄 수 있는 사람이 되고 싶다는 생각이 들었다.
                         </p>
-                        <img src="/Img/name05.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name05.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -642,7 +659,7 @@
                             📝 거다 러너<br/>
                             가부장제가 적응하면서 살아가야 하는 주체라고 생각했는데 역사 속에서 생겨난 체제일 뿐이고 끝날 수 있다는 말이 더 넓은 사고방식을 갖게 해준 것 같다. 별개로 클라라 슈만이 동성도 질투할 수 없을 만큼 좋은 실력을 가졌음에도 불구하고 부부 갈등이 생길까봐 노심초사했다는 것을 읽고 여자가 잘나면 왜 그런 것까지 고민을 해야 할까 공감되면서도 안타까웠다.
                         </p>
-                        <img src="/Img/name06.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name06.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -662,7 +679,7 @@
                             
                             그렇기 때문에 '이갈리아의 딸들'이나 '허랜드' 같은 인문학적 통찰력을 갖춘 작가들의 작품이 운동에 매우 도움이 될 수 있고 필요하다고 생각했는데, 역사로 길을 제시하려 한 거다 러너의 방식이 기본에 충실하다면 충실한 방식인데도 새로웠다. 인문학에 왜 역사가 들어가는지도 다시 느꼈다.
                         </p>
-                        <img src="/Img/name07.jpg" alt="" class="herStory">
+                        <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/name07.jpg" alt="" class="herStory">
                         <div class="Page">
                             <div>
                                 <p>
@@ -681,8 +698,8 @@
                 <div class="Question">
                     모임을 마치며
                 </div>
-                <img src="/Img/noname1.jpg" alt="" class="herStory">
-                <img src="/Img/noname2.jpg" alt="" class="herStory">
+                <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/noname1.jpg" alt="" class="herStory">
+                <img src="https://fancy-cuchufli-8edd09.netlify.app/Img/noname2.jpg" alt="" class="herStory">
                 <p>
                     마지막으로 풍물패의 공연 사진도 남겨둡니다^^... 뜨거운 햇빛 탓에 계속 자리를 이동해야 했는데도 불평하지 않고 유익하고도 재밌는 이야기 나눠주셔서 감사했어요. 현장을 글로 남기려니 부족함이 많아 아쉽지만 오래 좋은 기억으로 남겨두시면 좋겠습니다! 여성 해방의 역사 속에서 회원님들과 함께 이야기 나눌 수 있어서 행복했습니다. 수정할 내용이나 보완할 내용이 있다면 편하게 댓글에 달아주세요. 감사합니다!
                 </p>
