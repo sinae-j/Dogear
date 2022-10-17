@@ -5,88 +5,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no, address=no, email=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>🐶Dogear-1</title>
+    <title>🐶지정독서모임 후기</title>
+</head>
+<body>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
         }
-        html,
-        body {
-            font-family: 'Gowun Batang', serif;
+        #Dogear {
+            font-family: 'Gowun Batang', serif!important;
             width: 100%;
             margin:0 auto;
             overflow-x:hidden;
             line-height: 1.5;
-            }        
-        body {
-            background-color:#EFEDE0;
-        }
-        body:not(.no-js) .image-wrap {
-        transition: 1s ease-out;
-        transition-delay: 0.2s;
-        position: relative;
-        width: 100%;
-        height: 50vmin;
-        overflow: hidden;
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-        visibility: hidden;
-        }
-
-        body:not(.no-js) .image-wrap img {
-        transform: scale(1.3);
-        transition: 2s ease-out;
-        }
-
-        body:not(.no-js) .animating .image-wrap {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        visibility: visible;
-        transform: skewY(0);
-        }
-
-        body:not(.no-js) .animating img {
-        transform: scale(1);
-        transition: 4s ease-out;
-        width: 100%;
-        }
-
-        body:not(.no-js) .fadeup {
-        opacity: 0;
-        transition: 0.4s ease-out;
-        transition-delay: 0.4s;
-        transform: translateY(40px);
-        }
-        body:not(.no-js) .fading-up {
-        opacity: 1;
-        transition: 1s ease-out;
-        transform: translateY(0px);
-        transition-delay: 0.6s;
-        }
-        body:not(.no-js) h3.fading-up {
-        transition-delay: 0.4s;
-        }
-
-        body:not(.no-js) p.fading-up {
-        transition-delay: 0.8s;
-        }
-        h3 {
-            font-size: clamp(16px, 3vw, 18px);
-            font-weight:700;
-            margin:0;
+            text-align:left;
             padding:0;
         }
-        h2 {
-            font-size: clamp(24px, 5vw, 32px);
-            font-weight:400;
-            margin:0;
-            padding:0;
-        }
-        p {
-            font-size: clamp(14px, 1.5vw, 16px);
-            font-weight:400;
-            margin:0;
-            padding:0;
-            color:#00000090;
+        #Dogear * {
+            text-align:left;
+            font-family: 'Gowun Batang', serif!important;
         }
         .pri {
             color: #7B824E;
@@ -98,150 +36,658 @@
             width:100%;
             padding:80px 20px;
             clear: both;
+            display: flex;
+            flex-direction: column;
+            gap: 120px;
         }
-        .container.bpri {
-            padding:80px 20px 40px;
-        }
-        .container.bpri h3 {
-            color: #CAC27B;
-        }
-        .container.bpri h2 {
-            color: #fff;
-        }
-        .container.bpri p {
-            color: #ffffff80;
-        }
-        .container .TxtGroup {
+        .TxtGroup {
             display: flex;
             flex-direction: column;
             gap: 40px;
+            border-bottom:1px solid #eaeaea;
+            padding-bottom:80px;
         }
-        .container .TxtGroup .Title {
+        .TxtGroup:last-child {
+            border-bottom:none;
+        }
+
+        .TxtGroup .Title {
             display: flex;
             flex-direction: column;
             gap: 0;
         }
-        .container .TxtGroup.List ul {
+        .Desc  {
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 16px;        
+        }
+        .Desc .Question {
+            position:relative;
+            color: #A2AB69;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            width: 96px;
+            height: 36px;
+        }
+        .Desc .Question::before {
+            content:'';
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #A2AB69;
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            z-index: 0;
+            border-radius: 500%;
+            position:absolute;
+            left: 0;
+            top:0;
+        }
+        .Desc .Section {
+            font-size: 14px;
+            width:100%;
+            opacity: 0.6;
+        }
+        .Desc h4 {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            margin: 0 0;
+            padding: 0 0 32px;
+            width: 100%;
+        }
+        .Desc h4 span {
+            opacity: 0.4;
+            display: block;
+            font-size: 15px;
+            margin: 10px 0 0;
+        }
+        .talk {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .opinion {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding:0 0 24px;
+        }
+        .opinion h5 {
+            color: #A2AB69;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 0;
+            margin:0;
+        }
+        .Desc p {
+            margin:0;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+        .Page {
+            padding:16px;
+            font-size: 14px;
+            width:100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .Page > div {
+            position: relative;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            list-style:decimal-leading-zero;
         }
-        .container .TxtGroup.List ul li {
-            font-size: clamp(14px, 1.5vw, 16px);
-            font-weight:400;
+
+        .Page::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: #E3DBC0;
+            opacity: 0.2;
+            border-radius: 12px;
+        }
+        .Page p {
+            opacity: 0.7;
+        }
+        .Page span {
+            display: block;
+            font-size: 14px;
+            opacity: 0.2;
+        }   
+        .container .Information {
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 24px;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        background: #7B824E;
+        border-radius: 12px;
+        }   
+        .container .Information div {
+            width: 100%;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .container .Information h5 {
+            color: #CAC27B;
+            font-weight: 400;
+            font-size: 14px;
+
+            padding: 0;
             margin:0;
-            padding:0;
-            color:#00000090;
+        }
+        .container .Information span {
+            opacity: 0.6;
+            font-size: 14px;
+            display: block;
+            font-weight: 400;
+        }
+        .reveal {
+            padding: 20px 0;
         }
         .reveal .image-wrap.Cover {
             aspect-ratio: 16 / 9;
             width: 100%;
             height: min(50vmin, 450px);
         }
-        .container .image-wrap.book {
-            aspect-ratio: 3 / 5;
-            height: clamp(400px, 80vw, 680px);
-            width: auto;
+        .reveal span {
+            padding: 4px 12px;
+            display: inline-block;
+            background:#A2AB69;
+            color: #FFFFFF;
+            border-radius: 40px;
+            margin:0 0 16px;
+            font-size: 14px;
+            font-weight: 400;
         }
+        .reveal iframe {
+            display: block;
+        }
+        .bookList {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .image-wrap.book {
+            aspect-ratio: 3 / 5;
+            height: clamp(240px, 50vw, 400px);
+            width: auto;
+            display: block;
+        }
+        .herStory {
+            width:100%;
+            display: block;
+        }
+        @keyframes DurationWrap {
+            0% {
+                clip-path:polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                visibility:  hidden;
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            100% {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                visibility: visible;
+                transform: skewY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes DurationImg {
+            0% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeup {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        #Dogear .image-wrap {
+            animation-name: DurationWrap;
+            animation-duration: 1s;
+            animation-delay:0.4s;
+            animation-timing-function: ease-out;
+            overflow:hidden;       
+            animation-fill-mode	:backwards;
+        }
+        #Dogear .image-wrap img {
+            animation-name: DurationImg;
+            animation-duration: 4s;
+            animation-timing-function: ease-out;
+            overflow:hidden;       
+            width: 100%!important;
+            max-width: 1920px!important;
+            animation-fill-mode	:backwards;
+        }
+        #Dogear .fadeup {
+            animation-name: fadeup;
+            animation-duration: 1.6s;
+            animation-delay:0.6s;
+            animation-timing-function: ease-out;
+            animation-fill-mode	:backwards;
+        }           
     </style>
-</head>
-<body>
-    <div class='reveal'>
+    <div id="Dogear" class='container'>
         <div class="image-wrap Cover">
-            <img src='Cover.png'>
+            <img src='Img/cover.jpg'>
         </div>
-    </div>
-    <div class='container'>
-        <div class="TxtGroup">
-            <div class="Title">
-                <h3 class="fadeup pri">10월의 지정도서</h3>
-                <h2 class="fadeup">지성이 금지된 곳에서 깨어날 때</h2>
+        <div class="Information fadeup">
+            <div>
+                <h5>일시</h5>
+                2022.10.15(토) 오후 2시~5시
             </div>
-            <p class="fadeup Desc">
-                안녕하세요. <Br/>
-                안녕하세요. <Br/>
-                안녕하세요. <Br/>
-                안녕하세요. <Br/>
-                안녕하세요. <Br/>
-                안녕하세요. <Br/>                
-            </p>
+            <div>
+                <h5>인원</h5>
+                7명 (간장, 나무, 도치, 동배기, 바름, 안녕, 이원)
+            </div>
+            <div>
+                <h5>장소</h5>
+                선운지구 황룡강 친수공원
+            </div>
         </div>
-    </div>
-    <div class='container bpri'>
         <div class="TxtGroup">
-            <div class="Title">
-                <h3 class="fadeup pri">
-			<a href="dog2.html">10월의 지정도서</a>
-		    </h3>
-                <h2 class="fadeup">여자를 위한 세계는 없었다</h2>
-            </div>
-            <p class="fadeup Desc">
-                이 책은 지성의 힘으로 금기를 넘어서며 새로운 시야를 만들어낸 이들의 책을 통해 그들의 삶과 생각을 들여다본 저작이다. <br/>
-                ‘여성’이라는 이슈를 중심으로 하되, 남자도, 페미니스트가 아닌 사람도, 페미니스트이지만 마냥 선하지만은 않은 이들도 모두 다루고 있다. <br/>
-                굳건히 닫힌 문 앞에서 포기하지 않고 끈질기게 문을 두드린 이들의 이야기인 셈이다.
-            </p>
-            <div class='reveal'>
-                <div class="image-wrap book">
-                    <img src='Book.png'>
+            <div class="Desc fadeup">
+                <div class="Question">
+                    첫번째 발제문
+                </div>
+                <h4>
+                    지성이 금지되지 않은 시대인 지금 여전히 부조리하게만 느껴지는 세상의 여성으로서 억압과 차별로 인한 분노를 경험해 본 적 있나요?
+                </h4>
+                <div class="talk">
+                    <div class="opinion">
+                        <h5>간장</h5>
+                        <p>
+                            여러 차별을 겪지만 기혼자로서 가부장제의 불합리함을 가장 많이 느낀다. 호칭에도 남성 중심의 권력을 느낄 수 있는데 여자는 아주버님, 도련님, 아가씨라고 부르는 반면 남자는 처남, 처형, 처제와 같은 형식이다. 남자도 마님, 아씨라고 해야 하는 거 아닌가? 요즘 부부들도 부모님 세대만큼은 아니지만 여성은 자녀의 출산과 양육을 담당하고 남성은 경제활동을 하는 일반적인 형태에서 크게 벗어나는 경우를 보기 힘든 게 사실이다 보니 외부 사람을 만날 때는 쉽게 양보하고 배려하는 일도 가정 안에서는 공평함을 유지하고 싶은 마음에 더 엄격하게 행동하게 된다. 가부장제에 저항하는 가정을 만들고자 노력하는 것과 별개로 다른 이들의 삶을 쉽게 재단하지 않기 위한 노력도 함께하는 중이다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>동배기</h5>
+                        <p>
+                            20대 때 5년 교제한 남자친구의 집에 결혼 전제는 아니었지만 인사를 하러 간 적이 있었다. 어디서 보기 힘든 진수 성찬을 대접받았는데 식사가 끝나고 남자 형제들은 가만히 앉아있고 어머니와 할머니만 집안일을 하고 있는데 가만있을 수 없어서 치우는 걸 돕다가 "나중에 많이 할 건데 앉아있어라."라는 말을 듣고 이상한 기분을 느꼈다. 손님은 대접받는 입장인 건데 남자들은 당연히 가만있는데도 왜 혼자 좌불안석이고 미안해할까 스스로 문제점을 느꼈다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>나무</h5>
+                        <p>
+                            결혼 8년 차 기혼자다. 막연하게 차별이 있구나 싶던 게 결혼을 하고 나니 피부로 직접 다가왔다. 불편하다고 말하기 애매한 상황이 자꾸 발생하고 받아들이기에는 자존심이 상한다. 본가가 수원이라 처가에서 명절에 하루 머무는 경우가 있는데 시가에서 딱히 가사 노동을 요구하지는 않지만 가만히 있으면 눈치가 보인다. 반면에 남편은 당연히 처가에서 가만히 있는 게 싫어서 남편에게 일을 시킨다. 출산을 하면 남성이 비교적 연봉이 높기 때문에 여성이 그만두는 게 맞다고 당연하게들 말하는데 그만큼 임금 차별에 대한 인식이 부족한 것이라 느낀다. 부부동반 모임을 할 때 일부러 출산한 여성분이 계시면 "무슨 일 하셨어요?"라고 질문한다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>도치</h5>
+                        <p>
+                            회사 생활을 하다 보면 손님이 방문할 때 당연하게 여직원에게 차 심부름을 시키는 경우가 있다. 어느 날 고졸 직 채용을 시행하고 사내에 은근한 위계질서가 생겼는데 그쪽으로 채용된 직원과 친해져서 회사가 너무 보수적이라는 불평을 듣게 되었다. 도움을 주고 싶어서 일례로 "차를 타오라고 하면 모두 너를 쳐다보니 당연하게 차를 타오지 말라.", "회사 분위기에 순응하지 말고 인식을 깨야 한다." 조언했는데 결국 손절당했다. 보수적인 사내 분위기에 너무 익숙해져서 아마 비슷한 조언을 들어본 적 없었던 것 같다. 부족한 남자친구에 대한 환상을 깨지 못하는 모습을 보면 안타깝지만 아무리 조언해도 소용없다는 걸 깨닫게 된다. 그럼에도 회사 내에서 꼰대가 되더라도 성차별적인 행동을 보면 무조건 성별과 관계없이 막내가 하는 일으로 간주시키려고 노력하고 있다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>바름</h5>
+                        <p>
+                            공학 계열 중 여자가 많은 학과를 전공했다. 인턴직에 대한 교수님과의 면담에서 '대기 환경'을 하고 싶다 밝혔는데 현장에서 여자를 받아주지 않는다고 반려당했다. 꿋꿋이 의사를 밝혔지만 통하지 않아서 알바를 병행하며 보육교사라는 새로운 전공을 찾게 되었다. 보육 교사직에 재미를 느끼며 행복해하던 와중에 "여자라서 안 됐다고 했으면서 왜 그 길을 선택했냐."라는 말을 들으며 상처받은 경험이 있다. 또한 5년 동안 장거리 연애를 했던 남자친구와 결혼을 계획하던 중 본인의 지역으로 와서 새로운 직업을 구하라는 당연한 태도에 큰 배신감을 느끼고 결별을 하게 되었다. 용기가 많이 필요한 일이었지만 한 번도 그 선택을 후회한 적은 없다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>안녕</h5>
+                        <p>
+                            매일 뉴스를 보며 분노를 겪고 있다. 데이트 폭력이나 묻지마 폭행을 당하는 여성은 주목받지 못하는 반면에 남성이 상해를 입으면 이슈가 된다. 할 말 다 하는 성격이라 직장에서 어린 여자애가 사근사근하지 못하다는 말을 듣는데 남자 직원이 같은 행동을 하면 패기가 좋다는 칭찬을 듣는다. 해결할 수 없는 문제도 많지만 적어도 직장에서 메신저를 쓰는 상황에서 쿠션어를 절대 사용하지 않으려고 한다. 그러면서도 스스로 너무 차갑게 말했나 검열하게 되는데 그 검열 또한 남성은 하지 않는다 생각하면 화가 난다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>이원</h5>
+                        <p>
+                            돈 무엇보다 돈. 임금 격차 이야기만 나오면 즉각적으로 분노할 수 있다. 남자의 경우 군 기간 근속연수에 따른 호봉이 있다. 이를 통계적으로 볼 수 있으니 남녀의 임금 격차는 너무 명확하다. 게다가 결혼을 한 남자는 가족수당이 나온다. 당신은 여자란 이유로 오후 3시부터 무급으로 일했다는 그 한 문장에 담긴 현실이란… 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class='container'>
-        <div class="TxtGroup List">
-            <div class="Title">
-                <h3 class="fadeup pri">
-                    <span>1장</span>
-                    어떤 여자들에 대하여
-                </h3>
-                <h2 class="fadeup">지성은 여성의 것</h2>
+
+        <div class="TxtGroup">
+            <div class="Desc fadeup">
+                <div class="Question">
+                    두번째 발제문
+                </div>
+                <h4>
+                    긴즈버그는 끊임없이 자신을 의심하는 태도를 가졌던 것으로 유명했습니다. 스스로 옳다고 여기던 착각이 깨지고 더 넓은 사고를 갖게 된 경험이 있나요?
+                </h4>
+                <div class="talk">
+                    <div class="opinion">
+                        <h5>간장</h5>
+                        <p>
+                            책이 평생 그 역할을 해준다고 생각한다. 또한 사람들의 삶의 태도나 사고방식을 보면서 편협함을 깨뜨리는 순간이 많은데 최근에 회사 mz세대 회사 동생이 점심을 먹다가 "비혼 비출산!"을 육성으로 당당하게 말하는 걸 보고 놀라웠다. 그들의 태도가 미성숙하다고 느끼는 때가 많지만 고정관념에서 훨씬 자유로워 보인다. 완벽하게 이해할 수 없기도 하고 세대 차이는 갈수록 커지겠지만 거부하기보다는 수용하려는 태도를 가져야겠다고 생각했다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>이원</h5>
+                        <p>
+                            최근에는 최재천 교수가 심심한 사과를 비롯한 어휘력 문제에 대해 이야기한 부분을 들으며 사고의 환기와 확장을 느꼈다.
+                            언제까지 기성세대가 이렇게 "요즘 어린 젊은 애들은~" 하고 평가하는 자리에만 있겠느냐
+                            앞으로 2,30년 뒤면 이 세대들을 지적하던 시람들은 문화나 사회의 중심에서 멀어져 있을 텐데 그때 그 평가당하던 친구들의 의사소통 체계는 당연히 그 사람들의 방식으로 바뀔 텐데 이를 어찌 막을 수 있겠나.
+                            그리고 기억하면 항상 사람들은 "요즘 것들은 말이야" 타령을 하고 쓸데없는 것만 좋아한다며 탓하는 말을 하고 있는 것 같다. 하지만 다음 세대는 항상 이전 세대보다 무조건 더 탁월하고 그렇기 때문에 세상은 좋은 방향으로 바뀌고 있다.
+                            그들은 이미 각자의 방향으로 나가고 있으니 세대 간의 차이를 극복하기 위한 노력은 기성 세대가 할 수밖에 없는 것이라 생각한다는 말이다.                            
+                            영상의 모든 말에 공감하는 것은 아니지만 상당수 공감하고 저런 태도야말로 그 잘난 어른들이 갖춰야 할 부분이 아닌가 생각했다.
+                        </p>
+                        <div class='reveal'>
+                            <span>이원님의 추천 컨텐츠</span>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FUHmNUoYNmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>동배기</h5>
+                        <p>
+                            중고등학생들을 교육하다 보면 공부하기 싫어하면서 뭐가 될 거라고 하는 꿈같은 소리를 들을 때가 있는데 마음 속으로 공부를 좀 하면서 그 소리를 하면 좋겠는데 싶다. 과거에 나 역시 그랬을 텐데 아이들을 한심하다고 생각하는 것을 경계해야겠다는 생각이 문득 들었다. 아이를 교육하는 입장에 있다 보니 꼰대가 되어갈 수밖에 없다. 꿈 많은 아이들을 평가하다 보면 이전 방식을 가르치는 입장이야말로 도태될 텐데, 언젠가 그들이 주류가 될 사회를 맞으려면 함께 성장해가지 않으면 안 되겠다는 생각이 든다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>나무</h5>
+                        <p>
+                            처음 가장 넓은 사고를 가지게 된 계기는 강남역 살인사건이었다. 그리고 독서모임에서 수전 손택의 '은유로서의 질병'을 읽고 많은 깨달음을 얻었다. '뚱뚱하고 가난한 사람은 결핵에 걸린다.', '암과 싸운다.'와 같은 은유로서의 표현이 지는 전쟁인 것처럼 환자에게 책임과 고통을 주기 때문이다. 과학이 발달할수록 질병의 원인이 환자에게로 책임 전가되고 인간이 죽음의 진실을 부정하게 되는 현상도 알 게 되면서 사고가 크게 확장됐다. 질병 외의 다른 분야에서 은유를 하는 건 뭐가 있을까 생각해 보기도 한다.
+                        </p>
+                        <div class='reveal'>
+                            <span>나무님의 추천 도서</span>
+                            <div class="bookList">
+                                <div class="image-wrap book">
+                                    <img src='Img/book01.jpg'>
+                                </div>
+                                <div class="image-wrap book">
+                                    <img src='Img/book02.jpg'>
+                                </div>
+                            </div>
+                            <em>은유로서의 질병 - 수전 손택, 유원 - 백온유</em>
+                        </div>
+            
+                    </div>
+                    <div class="opinion">
+                        <h5>안녕</h5>
+                        <p>
+                            최근 국내 정치를 보며 선량하다고 여기던 인물에 대한 신뢰가 무너지는 경험을 했다. 믿음직스럽다 생각해서 주위에 말하고 다녔던 내용이 거짓으로 판명되면 옳다고 여기던 것이 모두 부질없게 느껴진다. 여야를 다 떠나서 항상 직접 팩트체크를 하고 누군가에게 말을 전해야겠다고 생각했다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>바름</h5>
+                        <p>
+                            내가 옳다 생각하면 설득까진 아니어도 말을 꼭 하고 넘어가야 하는 성격이다. 뭘 해도 수긍하는 조용한 성격의 친구가 고맙지만 답답할 때도 있어서 어느 순간 "너는 정말 뭐든 다 좋아?"라고 물었더니 "다 좋은 건 아니지만 나는 너를 위한 최선의 말과 친구로서 최선의 선택을 하고 있는 거야."라는 대답을 듣고 큰 고마움을 느낀 뒤로 가치관이 바뀌게 되었다. 힘든 일이 생겼을 때 "위로해 줄까? 재미있는 얘기를 해줄까?"라고 말하는 친구의 위로는 태어나서 처음 겪어보는 방식이기도 했다. 작은 말 한마디가 내 삶을 이렇게 바꿀 수 있구나 느낀 후 말의 경중이 스스로에게 치우칠 때마다 무게를 중심으로 움직이려고 한다. 진짜 어렵겠지만 그 친구처럼 되고 싶다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>도치</h5>
+                        <p>
+                            스스로 공인에 대한 기준이 엄격한데 미디어에 보여지는 모습이 사회에 영향력이 크기 때문에 공인으로 직업을 삼았으면 겉으로라도 책임감 있고 선한 모습을 보여야 한다고 생각했다. 그 착각이 깨졌던 계기는 설리와 구하라 사건. 어릴 때부터 연예계에 있으면서 사회적으로 미성숙한 모습도 있을 텐데 엄격한 잣대로 평가 당하는 환경에 노출되어 있는 사람들에게 나까지 그래야 할까 싶었다. 그 사건들을 통해 마찬가지로 가족이나 다른 인간관계에서도 더 유연한 태도를 갖게 되었다. 
+                        </p>
+                        <div class='reveal'>
+                            <span>도치님의 추천 도서</span>
+                            <div class="image-wrap book">
+                                <img src='Img/book03.jpg'>
+                                <em>다른 방식으로 보기 - 존 버거</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul>
-                <li class="fadeup">세상을 활보한 여자들, 그 용기에 대하여 </li>
-                <li class="fadeup">연단에 오를 권리를 위해 싸우다가 단두대에 오른 여자 </li>
-                <li class="fadeup">악명 높은 고령의 여성 대법관, 시대의 아이콘 되다 </li>
-                <li class="fadeup">부조리한 세계를 기꺼이 마주하되 아둔하리 만큼 원칙적인 삶 </li>
-                <li class="fadeup">냉소적이고 열렬했으며 죽을 때까지 야망을 놓지 않았던 지식인 </li>
-                <li class="fadeup">‘아버지의 왕국’을 고발하며 피와 빵과 시를 노래한 작가 </li>
-                <li class="fadeup">위대한 여성 피아니스트, 프랑켄슈타인의 괴물이 낳은 후손 </li>
-                <li class="fadeup">존재에 의미를 부여하는 역사가 우리에게도 있다 </li>
-                <li class="fadeup">강간 이데올로기에 맞서는 여성들의 반격이 시작되었다 </li>
-                <li class="fadeup">공공의 선을 위해 일어설 수 있는 사람이 되어야 한다</li>
-                <li class="fadeup">당대 현장의 그림자, 그 삶의 진면목을 탐구한 과학자 </li>
-                <li class="fadeup">완벽하지 않아도 괜찮아, 그렇다고 과거로 돌아가진 않을 거야 </li>
-                <li class="fadeup">죽어가는 이들의 삶을 들여다본 죽음의 여의사</li>
-            </ul>
+        </div>
+
+
+
+
+        <div class="TxtGroup">
+            <div class="Desc fadeup">
+                <div class="Question">
+                    세번째 발제문
+                </div>
+                <h4>
+                    여성의 몸에 대한 담론은 현대 한국 사회의 가장 뜨거운 의제 중 하나일 것입니다. 록산 게이는 과거의 트라우마로 인해 몸을 부풀리며 강박에 시달렸습니다. 주변에서 외모 강박을 갖거나, 극복한 사례를 본 적 있나요? 여성의 몸이 자유로워질 수 있는 방법은 어떤 게 있을까요?
+                </h4>
+                <div class="talk">
+                    <div class="opinion">
+                        <h5>간장</h5>
+                        <p>
+                            유행의 영향도 있지만 대체적으로 예전에 비해 활동성이 좋고 편한 모습을 추구하는 것 같다. "예전으로 돌아갈 수 없을 것 같다" 라는 말을 들을 때 외형을 꾸미는 것에 대한 인식이 개선되고있다는 생각이 들면서 공감도 되고 기분이 좋다. 반면에 '소식좌'가 유행인데 남아서 버려지는 음식을 생각하면 소식이 좋지만 마른 몸을 추구하는 인식은 여전하니 복잡한 감정이 든다. 여성의 몸이 자유로워 지는 방법을 생각하면 ‘여성의 몸이 성적 대상화 되지 않는 날이 오긴 할까’ 하는 냉소적인 생각으로 이어지는데 결국 여성이 권위를 찾은 세상이 되어야만 여성의 몸이 야하지도 않고, 보호 받을 필요도 없는 자유를 찾을 수 있다고 생각한다.     
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>나무</h5>
+                        <p>
+                            강남역 사건 이후로 탈코르셋 운동에 참여하면서 거울은 볼 일이 줄어들었다. 이제 입술에 뭔가 바르기만 해도 어색하지만 피부나 머릿결, 옷의 소재와 같이 여전히 포기하지 못하는 것들이 있다. 새로 출근한 여자 직원이 화장을 하고 왔는데 모두 민낯이라 화장을 안 하게 됐다는 말을 듣고 주변에서 하지 않으면 동조하지 않으니 미디어가 중요한 역할을 한다고 생각했다. 선망의 대상인 아이돌의 외모를 따라하고 싶은 건 당연한 일이고 요즘은 포르노도 더 자극적인 소재가 당연시되고 있다. 미디어가 얼마나 여성을 노예화시키고 강박화 시키는지 알고 싶다면 포르노 랜드라는 책을 추천한다.
+                        </p>
+                        <div class='reveal'>
+                            <span>나무님의 추천 도서</span>
+                            <div class="image-wrap book">
+                                <img src='Img/book04.jpg'>
+                                <em>포르노랜드 - 게일 다인스</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinion">
+                        <h5>안녕</h5>
+                        <p>
+                            직업 특성상 어린이, 청소년을 많이 보는데 외모에 대한 강박을 쉽게 볼 수 있다. 예를 들어 급식을 다 남기거나, 맨 얼굴을 보이기 싫어서 마스크를 쓴 채로 밥을 먹는 행동 등 요즘 여자 청소년들은 그런 것 때문에 학업 성적이 더 떨어진다는 얘기가 있을 정도다. 여자 연예인이 마른 몸으로 아름다움의 기준이 되어 돈을 버는 걸 비난할 수는 없지만 청소년들은 그걸 보면서 무대의상인 크롭탑을 입는 등 답습을 하기 때문에 유해함을 자주 느낀다. 외모 강박을 만드는 요소들이 코르셋이라는 걸 인정하는 것 만으로도 여성의 몸이 자유로워질 수 있다고 생각한다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>도치</h5>
+                        <p>
+                            예전에는 소녀시대가 마름의 기준이었다면 지금은 그냥 안 먹는 사람이 된 것 같다. 회사 동기 중 노메이크업에 편한 옷을 입는 직원에게 부서장이 같은 여성임에도 불구하고 "화장 좀 하고 다녀라 왜 그렇게 다니냐."라는 말을 했다고 한다. 지역본부에 있으면 민원 제기를 당할 수 있어 외모 지적을 하는 경우가 있지만 본사에서는 해당되지 않는 데도 일방적으로 지적한 것이다. 그 직원이 결혼도 빨리해서 육아 휴직을 거듭 연장하다 퇴사했는데 부정적인 소문마저 도는 걸 보고 참 잔인하다 느꼈다. 여성의 몸이 자유로워지려면 아이들이 자라면서 정상적인 사고를 할 수 있을 때까지 미디어를 규제하는 게 아니라 완전히 차단하는 것이 방법이라 생각한다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>동배기</h5>
+                        <p>
+                            20대에 남자친구와 헤어지고 새로운 연애를 하고 싶어서 외모에 신경을 쓰던 시기가 있었는데 외모를 꾸밀수록 꾸미지 않을 때의 스스로가 초라해 보였었다. 쌩얼로 다른 남자 선생님을 마주치면 얼굴을 가리면서도 내가 왜 화장을 안 했다는 이유로 부끄러움을 느껴야 하는지 의문스러웠다. 코로나로 인해 마스크를 쓰고 수업을 하게 되면서 화장을 완전히 포기하게 되었는데 외모 강박이 내 내면에서 나온 게 아니라 주변 시선에서 비롯된 거라는 걸 깨닫게 되면서 자유로움을 느꼈다. 긴머리에서 숏컷이 된 🔥페미전사🔥같은 모습에 "심경에 무슨 변화 있어?"라는 질문을 받으면 민망하기도 하지만 더 자유로워지고 싶다는 충동이 일기도 한다. 사회를 바꾸는 건 굉장히 오랜 시간이 걸리는데 나 자신을 풀어주는 건 어렵지 않고 되게 행복한 일이다. 야식을 먹을 때도 살이 찔까 걱정하기보다는 소화가 될까 고민하며 영양제를 과다 복용하는 30대가 되었지만 지금이 훨씬 행복하고 자유롭다.
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>이원</h5>
+                        <p>
+                            몸을 부풀려서 성범죄로부터 조금 더 멀어졌다고 생각했던 록산 게이의 트라우마에 공감이 됐다. 레즈비언 페미니스트들이 존재 자체로 자신들이 가부장제에 반격을 하고 있다 말했듯 여자는 예뻐야 한다고 말하는 사회에서 존재 자체로 저항하고 싶다.<br/>
+                            (이원님이 작성해서 저에게 준 내용이 너무 좋았는데... 제가 실수로 분실했어요 🥲 댓글 달아주시면 추가로 보완하겠습니다.)
+                        </p>
+                    </div>
+                    <div class="opinion">
+                        <h5>바름</h5>
+                        <p>
+                            직업 특성상 화장을 안 하거나 옷을 단정하게 입지 않으면 불려간다. 스스로 외모 강박을 다 놓지 못했지만 하나씩 노력하는 중인데 예를 들어 와이어가 달린 속옷을 벗고 니플패치를 붙이기만 해도 해방되고 살 것 같은 기분이 든다. 
+                            최근 '가녀장의 시대'를 출간한 이슬아 작가가 페미니스트임은 공공연한 사실이지만 탄탄한 몸매를 만들고 빨간 립스틱을 바르는 게 좋다고 말해서 검열 당하기도 했다. 외모에 대한 모든 치장을 다 버려야 한다는 또 다른 강박에 사로잡히기보다는 나만의 주체성을 찾아야 한다고 생각하고 스스로도 그것을 찾아가는 과정에 있다고 생각한다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="TxtGroup">
+            <div class="Desc fadeup">
+                <div class="Question">
+                    네번째 발제문
+                </div>
+                <h4>
+                    수 많은 거인들이 등장하는 이 책에서 
+                    당신에게 가장 영감을 준 인물은 누구였으며 그 이유는 무엇이었나요?
+                    <span>
+                        발제문에 해당하는 인물들의 이름을 직접 작성해보는 시간을 가졌습니다 :)
+                    </span>
+                </h4>
+                <div class="talk Names">
+                    <div class="opinion">
+                        <h5>간장</h5>
+                        <p>
+                            📝 마사 누스바움<br/>
+                            감정은 절대 자연스러운 게 아니라 주장하는 감정학자로 ‘원래 그래’라는 말로 책임을 회피하던 경험을 떠올리게 했다. 두려움에 저항할 이유가 되어준 힘이 되는 말인 동시에 누군가의 이해할 수 없는 분노나 혐오와 마주할 때도 공격적인 행동들이 두려움에서 기인한 것인지 고민해 볼 수 있을 것 같다.
+                        </p>
+                        <img src="/Img/name01.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    두려움은 사회를 파괴하는 원시적이고 이기적이고 경솔하며 지독한 자기애의 감정이자 전제 군주제의 감정이라고 그는 설명한다. 두려움은 공격적인 타자화 전략으로 이어지며 통제해줄 누군가의 보호 또는 독재적 지배자를 호출하기 때문이다
+                                </p>
+                                <span>129p</span>
+                            </div>
+                        </div>
+                        <div class='reveal'>
+                            <span>간장의 추천 도서</span>
+                            <div class="image-wrap book">
+                                <img src='Img/book05.jpg'>
+                                <em>자기만의 방 - 버지니아 울프</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>나무</h5>
+                        <p>
+                            📝 바버라 에런라이크<br/>
+                            사회가 나서야 될 문제를 개인의 책임으로 전가하고 있다는 의견에 공감이 갔다. 현실에 만연한 힐링 서적들만 봐도 알 수 있다. 코로나로 인한 팬데믹 상황에서 정신건강을 지원해 준다는 프로그램을 봤을 때도 노동자에게 실질적인 지원이나 휴가 등 사회적 보상을 주지 않고 국가가 제 역할을 개인의 책임이나 나약함으로 치부하는 건 위험한 문제라고 생각했다.
+                        </p>
+                        <img src="/Img/name02.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    긍정적인 마음가짐만으로 병을 고칠 수 있다는 주장으로 환자들을 현혹한 이런 산업은 종교의 기업화와 만난다. 마음의 힘이 당신에게 행복을 주리라는 ‘긍정 교리’는 대형 교회에도, 책에도, 불교 세미나에도, 명상 센터에도, 쇼핑몰에도, 심지어 기업 임원실에도 널리 퍼져 있다. 인간은 자석과 같아서 생각하는 것을 끌어당긴다거나 마음이 기적적으로 암을 낫게 하리라는 주장은 끝없이 변주하면서 되풀이되는 건강과 종교의 기본 적인 담론이다. 주술적 사고의 시대에 각자의 불행과 패배는 전적으로 개인의 책임이 된다. 이에 에런라이크는 "긍정 신학은 아름다움과 초월, 자비가 없는 세계를 완성하고 승인했다"고 말한다.
+                                </p>
+                                <span>142-143p</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>안녕</h5>
+                        <p>
+                            📝 에이드리언 리치<br/>
+                            최근 들어 틈만 나면 결혼에 대한 얘기를 듣게 되는데 평소에 비혼을 생각하고 있어서 좋은 의미로 하는 얘기인 걸 알지만 부담이 되고 흔들리기도 한다. 이성애자로 자신을 정체화하는 데서 벗어나는 건 책에서 말했듯 큰 용기가 필요하겠지만 보상도 매우 클 것이라는 독려에 마음이 훨씬 가벼워지는 것을 느꼈다.
+                        </p>
+                        <img src="/Img/name03.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    그는 이성애 관계에 의문을 제기하는 일이 거대한 침묵을 깨뜨리는 통로라고 생각했다. 침묵을 강요당하는 여성들 간의 사랑은 가부장제를 혁파하고 해방된 삶을 가져다줄 가장 강력하고 진솔한 무기가 된다는 것이다.
+                                </p>
+                                <span>91p</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>바름</h5>
+                        <p>
+                            📝 에이드리언 리치<br/>
+                            이 책의 페미니스트들이 가부장제에 속에서 살아왔기 때문에 스스로 피해를 인식했고 당장 무너뜨릴 수는 없지만 목소리를 내서 후세에 작은 도움을 줄 수 있다고 공통적으로 말하는 것 같았다. 90페이지에 리치가 남편의 (폭력적인)죽음을 겪고 한 말이 있는데 결국 책 속의 모든 인물들의 말을 집약해서 한 목소리로 내는 게 이 말이라고 생각했다. 
+                        </p>
+                        <img src="/Img/name04.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    당신은 죽은 채 세월을 낭비하고 있어요.
+                                    우리가 얘기하곤 했었던, 지금은 그러기에 너무 늦은,도약을 할 수도 있었을 텐데요.
+                                    난 지금 살고 있어요.
+                                    그런 도약은 아니라도, 짧고 강렬한 움직임을 유지하면서 말예요.
+                                </p>
+                                <span>90p</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>동배기</h5>
+                        <p>
+                            📝 루스 베이더 긴즈버그<br/>
+                            보수적인 법학 분야에서 연방 대법원 판사로 임명되기까지 얼마나 수 많은 고초를 겪었을까 싶었다. "여성 대법관이 9명이 되지 말라는 법이 있습니까?"라고 말하는 긴즈버그를 보고 뒤통수를 맞은 기분이 들면서 누군가의 기억 속에 이런 영감을 줄 수 있는 사람이 되고 싶다는 생각이 들었다.
+                        </p>
+                        <img src="/Img/name05.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    그에게 사람들이 "미국 연방 대법원에 여성 대법관이 몇 명이 있어야 충분하다고 보십니까?"라고 물을 때마다 긴즈버그는 "아홉 명입니다"라고 답했다. "오랫동안 대법관 아홉명이 모두 남성이었습니다. 여성 대법관이 아홉명이 되지 말란 법이 있습니까?"
+                                </p>
+                                <span>58p</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>도치</h5>
+                        <p>
+                            📝 거다 러너<br/>
+                            가부장제가 적응하면서 살아가야 하는 주체라고 생각했는데 역사 속에서 생겨난 체제일 뿐이고 끝날 수 있다는 말이 더 넓은 사고방식을 갖게 해준 것 같다. 별개로 클라라 슈만이 동성도 질투할 수 없을 만큼 좋은 실력을 가졌음에도 불구하고 부부 갈등이 생길까봐 노심초사했다는 것을 읽고 여자가 잘나면 왜 그런 것까지 고민을 해야 할까 공감되면서도 안타까웠다.
+                        </p>
+                        <img src="/Img/name06.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    (거다 러너는) 가부장제가 역사 속에서 시작되고 구성된 만큼, 끝날 수도 있는 체제라고 확신했다.
+                                </p>
+                                <span>111p</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opinion">
+                        <h5>이원</h5>
+                        <p>
+                            📝 거다 러너<br/>
+                            페미니즘 운동은 물론이고 사회주의 운동 등 사회운동의 전파나 전개가 어려운 이유 중 하나는 바로 그 자신들도 자신이 지향하는 세상을 구체적으로 그려내기 어렵고 그마저도 모두 다르기 때문이다.
+                            누구도 그런 세상을 보거나 경험한 적이 없기 때문에.
+                            
+                            그렇기 때문에 '이갈리아의 딸들'이나 '허랜드' 같은 인문학적 통찰력을 갖춘 작가들의 작품이 운동에 매우 도움이 될 수 있고 필요하다고 생각했는데, 역사로 길을 제시하려 한 거다 러너의 방식이 기본에 충실하다면 충실한 방식인데도 새로웠다. 인문학에 왜 역사가 들어가는지도 다시 느꼈다.
+                        </p>
+                        <img src="/Img/name07.jpg" alt="" class="herStory">
+                        <div class="Page">
+                            <div>
+                                <p>
+                                    여성의 독립과 자율성을 재확인 시켜줄 '전통'은 남성 중심의 '대문자 역사'에는 존재하지 않았다. 여성에겐 '그 역사'가 없었던 것이다. 선례가 없는 곳에서 사람들은 대안을 상상할 수 없다고 러너는 생각했다. 급진 페미니스트이자 신학자 메리 데일리의 말처럼 가부장적 사고의 그물에서 벗어나려 할 때 여성은 '실존적 없음'을 직면할 수밖에 없다는 것이다.                                
+                                </p>
+                                <span>109p</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="TxtGroup">
+            <div class="Desc fadeup">
+                <div class="Question">
+                    모임을 마치며
+                </div>
+                <img src="/Img/noname1.jpg" alt="" class="herStory">
+                <img src="/Img/noname2.jpg" alt="" class="herStory">
+                <p>
+                    마지막으로 풍물패의 공연 사진도 남겨둡니다^^... 뜨거운 햇빛 탓에 계속 자리를 이동해야 했는데도 불평하지 않고 유익하고도 재밌는 이야기 나눠주셔서 감사했어요. 현장을 글로 남기려니 부족함이 많아 아쉽지만 오래 좋은 기억으로 남겨두시면 좋겠습니다! 여성 해방의 역사 속에서 회원님들과 함께 이야기 나눌 수 있어서 행복했습니다. 수정할 내용이나 보완할 내용이 있다면 편하게 댓글에 달아주세요. 감사합니다!
+                </p>
+            </div>
         </div>
     </div>
-    <div class='container'>
-        <div class="TxtGroup List">
-            <div class="Title">
-                <h3 class="fadeup pri">
-                    <span>2장</span>
-                    3333333333333333333
-                </h3>
-                <h2 class="fadeup">말, 몸, 피, 신, 그리고 페미니즘</h2>
-            </div>
-            <ul>
-                <li class="fadeup">읽기와 쓰기, 몸과 마음을 관통하다</li>
-                <li class="fadeup">걷기, 움직이고 사색하고 저항하는 발걸음</li>
-                <li class="fadeup">분노, 그 미칠 듯한 데서 구원할 사람은 나 자신뿐</li>
-                <li class="fadeup">말싸움, 공식을 배우고 기술을 익혀라</li>
-                <li class="fadeup">혐오 표현, 그 해석과 저항을 위한 여러 갈래 길들</li>
-                <li class="fadeup">사랑, 사고파는 영역으로 침투한 감정 혹은 노동</li>
-                <li class="fadeup">여성의 몸, 한국 사회 담론전의 최전선</li>
-                <li class="fadeup">질병, 그것의 목소리와 이야기를 찾아서</li>
-                <li class="fadeup">투병, 겪는 이와 돌보는 이를 위한 약상자</li>
-                <li class="fadeup">월경, 생물학을 넘어선 문화정치학의 전쟁터</li>
-                <li class="fadeup">마음의 그림자, 잘 다뤄내야 할 중년의 과제</li>
-                <li class="fadeup">여신, 여성성을 뛰어넘어 우주와 맞닿은 세계</li>
-                <li class="fadeup">신학, 그 남성 중심적 권위에 맞선 여성들</li>
-                <li class="fadeup">불교, 상호연관성의 교리로 페미니즘과 만나다</li>
-            </ul>
-        </div>
-    </div>
-    <script  src="./script.js"></script>
 </body>
 </html>
-
